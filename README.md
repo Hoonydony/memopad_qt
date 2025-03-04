@@ -15,7 +15,7 @@ You can find Python-based Look_at_me at here: https://github.com/Hoonydony/memop
 
 1. Clone the repository:
    
-git clone https://github.com/Hoonydony/memopadqt.git cd memopadqt
+git clone https://github.com/Hoonydony/memopadqt.git 
 
 3. Create a build directory and configure CMake:
    
