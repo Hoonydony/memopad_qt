@@ -14,18 +14,22 @@ You can find Python-based Look_at_me at here: https://github.com/Hoonydony/memop
 - macOS (this project is currently built for macOS)
 
 1. Clone the repository:
+   
 git clone https://github.com/Hoonydony/memopadqt.git cd memopadqt
 
-2. Create a build directory and configure CMake:
+3. Create a build directory and configure CMake:
+   
 mkdir build
 cmake -S . -B build -DCMAKE_PREFIX_PATH=/path/to/Qt/6.8.2/macos -DCMAKE_BUILD_TYPE=Release
 
-3. Build the Project:
+5. Build the Project:
+   
 cmake --build build
 
-4. Create a distributable bundle:
+7. Create a distributable bundle:
+   
 cd build
-/path/to/Qt/6.8.2/macos/bin/macdeployqt Look_at_me.app -dmg
+/path/to/Qt/6.8.2/macos/bin/macdeployqt Look_at_me.app -dmg //the actual directory where you install Qt
 
-5. Open the generated Look_at_me.app from the build directory.
+9. Open the generated Look_at_me.app from the build directory.
 
