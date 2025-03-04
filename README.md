@@ -27,3 +27,4 @@ cd build
 /path/to/Qt/6.8.2/macos/bin/macdeployqt Look_at_me.app -dmg
 
 5. Open the generated Look_at_me.app from the build directory.
+
