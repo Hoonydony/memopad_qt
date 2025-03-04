@@ -3,4 +3,4 @@ cmake-build-*/
 *.o
 *.a
 *.so
-*.dmg
+*.dmg.DS_Store
