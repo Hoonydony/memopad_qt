@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>images/cake.png</file> <!-- Add the image -->
+    </qresource>
+</RCC>
