@@ -166,7 +166,6 @@ ApplicationWindow {
                         renameTabDialog.open()
                     }
 
-                    // TabButton의 높이를 기본값보다 30% 늘림
                     height: implicitHeight * 1.3
 
                     contentItem: Text {
@@ -176,8 +175,6 @@ ApplicationWindow {
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         anchors.centerIn: parent
-                        topPadding: 3
-                        bottomPadding: 3
                     }
                 }
             }
@@ -206,12 +203,12 @@ ApplicationWindow {
 
                         Keys.onPressed: (event) => {
                             console.log("TextArea: Key =", event.key, "Modifiers =", event.modifiers)
-                            if (event.key === Qt.Key_B && (event.modifiers & Qt.MetaModifier)) {
+                            if (event.key === Qt.Key_B && (event.modifiers & Qt.ControlModifier)) {
                                 console.log("TextArea: Command+B detected, toggling bold")
                                 backend.toggleBold(textArea)
                                 event.accepted = true
                             }
-                            if (event.key === Qt.Key_U && (event.modifiers & Qt.MetaModifier)) {
+                            if (event.key === Qt.Key_U && (event.modifiers & Qt.ControlModifier)) {
                                 console.log("TextArea: Command+U detected, toggling underline")
                                 backend.toggleUnderline(textArea)
                                 event.accepted = true
