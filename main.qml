@@ -192,31 +192,33 @@ ApplicationWindow {
                 Item {
                     property alias textArea: textArea
 
-                    TextArea {
-                        id: textArea
+                    ScrollView {
                         anchors.fill: parent
-                        wrapMode: TextArea.Wrap
-                        font.family: "Cambria Math"
-                        font.pointSize: 25
-                        selectByMouse: true
-                        focus: swipeView.currentIndex === index
+                        TextArea {
+                            id: textArea
+                            wrapMode: TextArea.Wrap
+                            font.family: "Cambria Math"
+                            font.pointSize: 25
+                            selectByMouse: true
+                            focus: swipeView.currentIndex === index
 
-                        Keys.onPressed: (event) => {
-                            console.log("TextArea: Key =", event.key, "Modifiers =", event.modifiers)
-                            if (event.key === Qt.Key_B && (event.modifiers & Qt.ControlModifier)) {
-                                console.log("TextArea: Command+B detected, toggling bold")
-                                backend.toggleBold(textArea)
-                                event.accepted = true
+                            Keys.onPressed: (event) => {
+                                console.log("TextArea: Key =", event.key, "Modifiers =", event.modifiers)
+                                if (event.key === Qt.Key_B && (event.modifiers & Qt.ControlModifier)) {
+                                    console.log("TextArea: Command+B detected, toggling bold")
+                                    backend.toggleBold(textArea)
+                                    event.accepted = true
+                                }
+                                if (event.key === Qt.Key_U && (event.modifiers & Qt.ControlModifier)) {
+                                    console.log("TextArea: Command+U detected, toggling underline")
+                                    backend.toggleUnderline(textArea)
+                                    event.accepted = true
+                                }
                             }
-                            if (event.key === Qt.Key_U && (event.modifiers & Qt.ControlModifier)) {
-                                console.log("TextArea: Command+U detected, toggling underline")
-                                backend.toggleUnderline(textArea)
-                                event.accepted = true
-                            }
-                        }
 
-                        onActiveFocusChanged: {
-                            console.log("TextArea focus changed:", activeFocus, "Tab index:", index)
+                            onActiveFocusChanged: {
+                                console.log("TextArea focus changed:", activeFocus, "Tab index:", index)
+                            }
                         }
                     }
                 }
