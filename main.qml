@@ -112,8 +112,28 @@ ApplicationWindow {
                 id: rightRow
                 spacing: 5
                 ToolButton {
-                    text: "+"
+                    text: "Add Tab"
                     onClicked: newTabDialog.open()
+                }
+                ToolButton {
+                    text: "Close Tab"
+                    onClicked: {
+                        if (tabModel.count > 0) {
+                            var currentIndex = swipeView.currentIndex
+                            tabModel.remove(currentIndex)
+                            // 탭이 제거된 후 인덱스 조정
+                            if (tabModel.count > 0) {
+                                // 현재 인덱스가 리스트 끝을 넘지 않도록 조정
+                                if (currentIndex >= tabModel.count) {
+                                    swipeView.currentIndex = tabModel.count - 1
+                                    tabBar.currentIndex = tabModel.count - 1
+                                }
+                            } else {
+                                // 탭이 하나도 없으면 새 탭 추가 다이얼로그 열기
+                                newTabDialog.open()
+                            }
+                        }
+                    }
                 }
                 ToolButton {
                     text: "Save"
