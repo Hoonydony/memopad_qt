@@ -42,7 +42,7 @@ Once you execute the .app, you will have this window that let you name the first
 ![image](https://github.com/user-attachments/assets/85c28e58-601b-4719-91e9-52d702cbdd2d)
 
 You can switch tabs by clicking the tab bar. If you want to rename a tab, double-click the tab.
-![image](https://github.com/user-attachments/assets/24f5031b-01d0-44af-b814-8535a20d365a)
+![image](https://github.com/user-attachments/assets/2befe7f1-58e8-4ddb-ba25-3dc499fb0694)
 
 You can change the font style independently as you wish.
 ![image](https://github.com/user-attachments/assets/b9b5d9bb-5d49-4602-beaa-be8ec2938230)
