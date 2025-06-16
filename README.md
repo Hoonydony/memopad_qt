@@ -14,24 +14,34 @@ You can find Python-based Look_at_me at here: https://github.com/Hoonydony/memop
 - macOS (this project is currently built for macOS)
 
 1. Clone the repository:
+   git clone https://github.com/Hoonydony/memopadqt.git 
+
+2. Create a build directory and configure CMake:
+
+   mkdir build
+
+   cmake -S . -B build -DCMAKE_PREFIX_PATH=/path/to/Qt/6.8.2/macos -DCMAKE_BUILD_TYPE=Release
+
+3. Build the Project:
    
-git clone https://github.com/Hoonydony/memopadqt.git 
+   cmake --build build
 
-3. Create a build directory and configure CMake:
+4. Create a distributable bundle:
    
-mkdir build
+   cd build
 
-cmake -S . -B build -DCMAKE_PREFIX_PATH=/path/to/Qt/6.8.2/macos -DCMAKE_BUILD_TYPE=Release
+   /path/to/Qt/6.8.2/macos/bin/macdeployqt Look_at_me.app -dmg //the actual directory where you install Qt
 
-5. Build the Project:
-   
-cmake --build build
+5. Open the generated Look_at_me.app from the build directory.
 
-7. Create a distributable bundle:
-   
-cd build
 
-/path/to/Qt/6.8.2/macos/bin/macdeployqt Look_at_me.app -dmg //the actual directory where you install Qt
+## How to Use
 
-9. Open the generated Look_at_me.app from the build directory.
+![image](https://github.com/user-attachments/assets/85c28e58-601b-4719-91e9-52d702cbdd2d)
+Once you execute the .app, you will have this window that let you name the first tab.
+
+![image](https://github.com/user-attachments/assets/24f5031b-01d0-44af-b814-8535a20d365a)
+you can switch tabs by clicking the tab bar. If you want to rename a tab, double-click the tab.
+
+![image](https://github.com/user-attachments/assets/b9b5d9bb-5d49-4602-beaa-be8ec2938230)
 
