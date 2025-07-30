@@ -5,7 +5,7 @@ Look_at_me - Qt/C++ version
 a simple memo pad for shared screen during cc
 
 You can find Python-based Look_at_me at here: https://github.com/Hoonydony/memopad_python
-
+You can find Slint-based Look_at_me at here: https://github.com/Hoonydony/memopad_slint
 
 ## Build Instructions
 
